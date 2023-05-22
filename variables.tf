@@ -10,3 +10,7 @@ variable "resource-group-name" {
 variable "storage-account-name" {
     type = string
 }
+
+variable "virtual-network-name" {
+  type = string
+}

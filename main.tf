@@ -25,3 +25,11 @@ module "storage_accnt" {
   resource-group-name = module.resource-group.resource_group_name
   storage-account-name = var.storage-account-name
 }
+
+module "virtual-network" {
+  source = "./virtual-network"
+  environment-value = var.environment-value
+  resource-group-name = module.resource-group.resource_group_name
+  resource-group-location = module.resource-group.resource_group_location
+  virtual-network-name = var.virtual-network-name
+}
