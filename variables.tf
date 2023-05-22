@@ -14,3 +14,7 @@ variable "storage-account-name" {
 variable "virtual-network-name" {
   type = string
 }
+
+variable "virtual-machine-name" {
+  type = string
+}

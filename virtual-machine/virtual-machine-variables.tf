@@ -10,6 +10,10 @@ variable "environment-value" {
   type = string
 }
 
-variable "virtual-network-name" {
+variable "virtual-machine-name" {
+    type = string
+}
+
+variable "webSubnet_nic_id" {
     type = string
 }

@@ -33,3 +33,12 @@ module "virtual-network" {
   resource-group-location = module.resource-group.resource_group_location
   virtual-network-name = var.virtual-network-name
 }
+
+module "virtual-machine" {
+  source = "./virtual-machine"
+  environment-value = var.environment-value
+  resource-group-name = module.resource-group.resource_group_name
+  resource-group-location = module.resource-group.resource_group_location
+  webSubnet_nic_id = module.virtual-network.webSubnet_nic_id
+  virtual-machine-name = var.virtual-machine-name
+}
