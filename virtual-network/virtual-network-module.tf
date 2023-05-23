@@ -32,4 +32,17 @@ resource "azurerm_network_interface" "nic" {
     subnet_id                     = azurerm_subnet.webSubnet.id
     private_ip_address_allocation = "Dynamic"
   }
+
+  
+}
+resource "azurerm_public_ip" "public_ip" {
+  name                = "public_ip"
+  location            = var.resource-group-location
+  resource_group_name = var.resource-group-name
+  allocation_method   = "Dynamic"
+  sku                 = "Standard"
+
+  tags = {
+    env = var.environment-value
+  }
 }
