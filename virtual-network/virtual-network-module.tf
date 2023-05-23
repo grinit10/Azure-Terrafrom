@@ -40,7 +40,7 @@ resource "azurerm_public_ip" "public_ip" {
   location            = var.resource-group-location
   resource_group_name = var.resource-group-name
   allocation_method   = "Dynamic"
-  sku                 = "Standard"
+  sku                 = "Basic"
 
   tags = {
     env = var.environment-value
